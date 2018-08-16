@@ -10,7 +10,7 @@ I learned how to use Jasmine to write a number of tests against a pre-existing a
 ## How to run the tests
 
 1. Download or clone this repository
-2. Load index.html5
+2. Load index.html
 3. Scroll to the bottom to see test results
 
 The spec file for this Jasmine test can be found under the folder jasmine > spec > feedreader.js
