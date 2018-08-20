@@ -89,7 +89,7 @@ $(function() {
          });
 
          it('shows at lease a single entry within the feed container', function() {
-           expect(feedContainer.length).not.toBe(0);
+           expect(feedContainer.children.length).not.toBe(0);
          })
     });
 
