@@ -79,7 +79,7 @@ $(function() {
 
     /* Test suite for initial feed load */
     describe('Initial Entries', function(){
-      var feedContainer = document.querySelector(".feed");
+      var feedAndChild = $('.feed .entry');
         /* Test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
@@ -89,7 +89,7 @@ $(function() {
          });
 
          it('shows at lease a single entry within the feed container', function() {
-           expect(feedContainer.children.length).not.toBe(0);
+           expect(feedAndChild.children.length).toBeGreaterThan(0);
          })
     });
 
@@ -103,9 +103,9 @@ $(function() {
        let nextFeed;
 
        beforeEach(function(done){
-         loadFeed(3, function(){
+         loadFeed(0, function(){
            firstFeed=document.querySelector('h1').innerText;
-           loadFeed(2,function(){
+           loadFeed(1,function(){
              nextFeed=document.querySelector('h1').innerText;
              done();
            });
